@@ -6,19 +6,27 @@ public class Principal {
                 + "\n");
 
         Carro bmw = new Carro();
-        bmw.marca = "BMW";
-        bmw.modelo = "M3";
-        bmw.quilometrosPorLitro = 7.5;
-        bmw.taxaAceleracao = 50;
-        bmw.velocidadeMaxima = 200;
-        System.out.println(bmw.marca);
-        System.out.println(bmw.modelo);
-        System.out.println(bmw.quilometrosPorLitro);
-        System.out.println(bmw.taxaAceleracao);
-        System.out.println(bmw.velocidadeMaxima);
+        bmw.setMarca("BMW");
+        bmw.setModelo("M3");
+        bmw.setQuilometrosPorLitro(7.5);
+        bmw.setVelocidadeMaxima(280);
+
+        Carro mercedes = new Carro("Mercedes", "c180");
+        System.out.println(mercedes.getMarca());
+        System.out.println(mercedes.getModelo());
+
+        System.out.println(bmw.getMarca());
+        System.out.println(bmw.getModelo());
+        System.out.println(bmw.getQuilometrosPorLitro());
+        System.out.println(bmw.getTaxaAceleracao());
+        System.out.println(bmw.getVelocidadeMaxima());
 
         bmw.acelerar();
         bmw.frear();
+
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 0, 10, 0));
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 5));
+        System.out.println(bmw.calcularTaxaAceleracao(100, 5));
 
         System.out.println("\n.: Fim da aplicação :."
                 + "\n");
