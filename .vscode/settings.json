@@ -5,7 +5,9 @@
         "lib/**/*.jar"
     ],
     "cSpell.words": [
+        "Aceleracao",
         "orientacaoaobjetos",
+        "quilometros",
         "variaveis"
     ]
 }
