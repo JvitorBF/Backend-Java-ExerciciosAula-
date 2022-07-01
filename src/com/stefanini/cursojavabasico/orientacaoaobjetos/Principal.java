@@ -11,25 +11,48 @@ public class Principal {
         bmw.setQuilometrosPorLitro(7.5);
         bmw.setVelocidadeMaxima(280);
 
-        Carro mercedes = new Carro("Mercedes", "c180");
-        System.out.println(mercedes.getMarca());
-        System.out.println(mercedes.getModelo());
+        //Carro mercedes = new Carro("Mercedes", "c180");
 
-        System.out.println(bmw.getMarca());
-        System.out.println(bmw.getModelo());
-        System.out.println(bmw.getQuilometrosPorLitro());
-        System.out.println(bmw.getTaxaAceleracao());
-        System.out.println(bmw.getVelocidadeMaxima());
+        Bmw bmwDois = new Bmw();
+        Tesla tesla = new Tesla();
 
-        bmw.acelerar();
-        bmw.frear();
+        Carro teslaDois = new Tesla();
+        ((Tesla) teslaDois).setDirigeSozinho(true);
+        System.out.println(((Tesla) teslaDois).isDirigeSozinho());
 
-        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 0, 10, 0));
-        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 5));
-        System.out.println(bmw.calcularTaxaAceleracao(100, 5));
+        Carro[] carros = new Carro[] { bmw, bmwDois, tesla, teslaDois };
 
-        System.out.println("\n.: Fim da aplicação :."
-                + "\n");
+        for (Carro carro : carros) {
+            if (carro instanceof Tesla) {
+                System.out.println(((Tesla) carro).isDirigeSozinho());
+            }
+        }
 
+        bmwDois.calcularTaxaAceleracao(100.50, 100);
+        teslaDois.calcularTaxaAceleracao(100.50, 10);
+
+        /*
+         * System.out.println(bmwDois.calcularTaxaAceleracao(100.5, 10.5));
+         * 
+         * System.out.println(mercedes.getMarca());
+         * System.out.println(mercedes.getModelo());
+         * 
+         * System.out.println(bmw.getMarca());
+         * System.out.println(bmw.getModelo());
+         * System.out.println(bmw.getQuilometrosPorLitro());
+         * System.out.println(bmw.getTaxaAceleracao());
+         * System.out.println(bmw.getVelocidadeMaxima());
+         * 
+         * bmw.acelerar();
+         * bmw.frear();
+         * 
+         * System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 0,
+         * 10, 0));
+         * System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidadeMaxima(), 5));
+         * System.out.println(bmw.calcularTaxaAceleracao(100, 5));
+         * 
+         * System.out.println("\n.: Fim da aplicação :."
+         * + "\n");
+         */
     }
 }
