@@ -43,6 +43,7 @@ public class SwitchCase {
                 System.out.println("Dezembro");
                 break;
             default:
+                System.out.println("Mês inválido");
                 break;
         }
     }
