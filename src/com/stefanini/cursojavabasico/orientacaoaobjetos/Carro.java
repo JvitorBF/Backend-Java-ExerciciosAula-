@@ -72,8 +72,12 @@ public class Carro {
         return velocidadeMaxima;
     }
 
-    public void setVelocidadeMaxima(int velocidadeMaxima) {
-        this.velocidadeMaxima = velocidadeMaxima;
+    public void setVelocidadeMaxima(int velocidadeMaxima) throws NegocioException {
+        if (velocidadeMaxima < 0) {
+            throw new NegocioException("Velocidade inválida!");
+        } else {
+            this.velocidadeMaxima = velocidadeMaxima;
+        }
     }
 
     public int getTaxaAceleracao() {

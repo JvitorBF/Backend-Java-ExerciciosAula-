@@ -9,9 +9,16 @@ public class Principal {
         bmw.setMarca("BMW");
         bmw.setModelo("M3");
         bmw.setQuilometrosPorLitro(7.5);
-        bmw.setVelocidadeMaxima(280);
 
-        //Carro mercedes = new Carro("Mercedes", "c180");
+        try {
+            bmw.setVelocidadeMaxima(10);
+        } catch (NegocioException e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("Passou no try!");
+        }
+
+        // Carro mercedes = new Carro("Mercedes", "c180");
 
         Bmw bmwDois = new Bmw();
         Tesla tesla = new Tesla();
