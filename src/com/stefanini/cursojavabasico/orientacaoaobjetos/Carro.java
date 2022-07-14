@@ -1,6 +1,6 @@
 package com.stefanini.cursojavabasico.orientacaoaobjetos;
 
-public class Carro {
+public abstract class Carro {
 
     /*
      * Modificadores de acesso
@@ -36,6 +36,8 @@ public class Carro {
     public void frear() {
         System.out.println("Freando...");
     }
+
+    public abstract void piscarAlerta();
 
     // Sobrecarga
     public double calcularTaxaAceleracao(double velocidadeFinal, double velocidadeInicial, double tempoFinal,

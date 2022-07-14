@@ -5,29 +5,34 @@ public class Principal {
         System.out.println("\n.: Começo da aplicação :."
                 + "\n");
 
-        Carro bmw = new Carro();
-        bmw.setMarca("BMW");
-        bmw.setModelo("M3");
-        bmw.setQuilometrosPorLitro(7.5);
+        /*
+         * Carro bmw = new Carro();
+         * bmw.setMarca("BMW");
+         * bmw.setModelo("M3");
+         * bmw.setQuilometrosPorLitro(7.5);
+         */
 
-        try {
-            bmw.setVelocidadeMaxima(10);
-        } catch (NegocioException e) {
-            System.out.println(e);
-        } finally {
-            System.out.println("Passou no try!");
-        }
+        /*
+         * try {
+         * bmw.setVelocidadeMaxima(10);
+         * } catch (NegocioException e) {
+         * System.out.println(e);
+         * } finally {
+         * System.out.println("Passou no try!");
+         * }
+         */
 
         // Carro mercedes = new Carro("Mercedes", "c180");
 
         Bmw bmwDois = new Bmw();
+        bmwDois.piscarAlerta();
         Tesla tesla = new Tesla();
 
         Carro teslaDois = new Tesla();
         ((Tesla) teslaDois).setDirigeSozinho(true);
         System.out.println(((Tesla) teslaDois).isDirigeSozinho());
-
-        Carro[] carros = new Carro[] { bmw, bmwDois, tesla, teslaDois };
+        teslaDois.piscarAlerta();
+        Carro[] carros = new Carro[] { bmwDois, tesla, teslaDois };
 
         for (Carro carro : carros) {
             if (carro instanceof Tesla) {
