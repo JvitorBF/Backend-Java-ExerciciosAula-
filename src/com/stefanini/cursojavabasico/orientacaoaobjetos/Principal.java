@@ -1,6 +1,16 @@
 package com.stefanini.cursojavabasico.orientacaoaobjetos;
 
+import com.stefanini.cursojavabasico.entidades.Bmw;
+import com.stefanini.cursojavabasico.entidades.Tesla;
+
 public class Principal {
+
+    static int valor = 10;
+
+    static void print() {
+        System.out.println(valor);
+    }
+
     public static void main(String[] args) {
         System.out.println("\n.: Começo da aplicação :."
                 + "\n");
@@ -35,10 +45,16 @@ public class Principal {
         Carro[] carros = new Carro[] { bmwDois, tesla, teslaDois };
 
         for (Carro carro : carros) {
+            if (Constantes.MARCA_FAMOSA.equals(carro.getMarca())) {
+                System.out.println("Carro de marca famosa");
+            }
             if (carro instanceof Tesla) {
                 System.out.println(((Tesla) carro).isDirigeSozinho());
             }
         }
+
+        Calcular.soma(0, 0);
+        print();
 
         bmwDois.calcularTaxaAceleracao(100.50, 100);
         teslaDois.calcularTaxaAceleracao(100.50, 10);

@@ -1,4 +1,8 @@
-package com.stefanini.cursojavabasico.orientacaoaobjetos;
+package com.stefanini.cursojavabasico.entidades;
+
+import com.stefanini.cursojavabasico.orientacaoaobjetos.Carro;
+import com.stefanini.cursojavabasico.orientacaoaobjetos.Esportivo;
+import com.stefanini.cursojavabasico.orientacaoaobjetos.Utilitario;
 
 public class Bmw extends Carro implements Esportivo, Utilitario {
 
